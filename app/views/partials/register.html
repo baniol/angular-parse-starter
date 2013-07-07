@@ -1,0 +1,37 @@
+<form method="post" name="formregister" novalidate ng-submit="sendRegister(registerForm)" spinner class="form-signin register css-form">
+<h2 class="form-signin-heading">Please register</h2>
+<div class="row-fluid">
+	<div class="control-group">
+		<div class="controls">
+		<span class="help-inline" ng-show="formregister.username.$error.minlength">Username must contain at least 5 characters.</span>
+		<span class="help-inline" ng-show="userExists">The username already taken.</span>
+			<input type="text" name="username" class="" placeholder="Username" ng-model="registerForm.username" ng-minlength="5" required />
+		</div>
+	</div>
+
+	<div class="control-group">
+		<div class="controls">
+		<span class="help-inline" ng-show="formregister.email.$error.email">This is not a valid email.</span>
+		<span class="help-inline" ng-show="emailExists">The email address already taken.</span>
+		<input type="email" name="email" class="" ng-model="registerForm.email" placeholder="Email" required />
+		</div>
+	</div>
+
+	<div class="control-group">
+		<div class="controls">
+			<span class="help-inline" ng-show="formregister.password.$error.minlength">Password must contain at least 5 characters.</span>
+			<input type="password" name="password" class="" ng-model="registerForm.password" ng-minlength="5" placeholder="Password" required />
+		</div>
+	</div>
+
+	<div class="control-group">
+		<div class="controls">
+			<span class="help-inline" ng-show="formregister.repeatPassword.$error.repeat-password">Pssword confirmation does not match.</span>
+			 <input type="password" name="repeatPassword" id="repeatPassword" class="" ng-model="registerForm.repeatPassword" repeat-password="password" placeholder="Confirm password" />
+		</div>
+	</div>
+</div>
+<div class="submit-btn-wrapper">
+	<button class="btn btn-large btn-primary" type="submit" ng-disabled="formregister.$invalid">Send</button>
+</div>
+</form>

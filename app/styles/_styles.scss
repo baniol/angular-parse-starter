@@ -1,0 +1,69 @@
+body {
+	padding-top: 40px;
+	padding-bottom: 40px;
+	background-color: #f5f5f5;
+}
+
+.form-signin {
+	max-width: 300px;
+	padding: 19px 29px 29px;
+	margin: 0 auto 20px;
+	background-color: #fff;
+	border: 1px solid #e5e5e5;
+	-webkit-border-radius: 5px;
+	   -moz-border-radius: 5px;
+			border-radius: 5px;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+	   -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+			box-shadow: 0 1px 2px rgba(0,0,0,.05);
+
+	.form-signin-heading, .checkbox {
+		margin-bottom: 10px;
+	}
+
+	input[type="text"], input[type="password"], input[type="email"]{
+		font-size: 16px;
+	height: auto;
+	margin-bottom: 15px;
+	padding: 7px 9px;
+	}
+}
+
+// login form
+
+.css-form{
+	position:relative;
+	padding-top:65px;
+	input.ng-invalid.ng-dirty {
+		background-color: #FA787E;
+	}
+	input.ng-valid.ng-dirty {
+		background-color: #78FA89;
+	}
+	h2{
+		position:absolute;
+		top:0;
+		left:0;
+		right:0;
+		border-top-right-radius:4px;
+		border-top-left-radius:4px;
+		height:40px;
+		font-size:18px;
+		margin:0;
+		background-color:#eee;
+		padding-left:30px;
+	}
+	.alert{
+		// padding-top:40px;
+	}
+}
+
+.flash-alert{
+	margin: 4px 10px;
+}
+
+// register
+// .form-signin.register {
+// 	max-width: 500px;
+// }
+

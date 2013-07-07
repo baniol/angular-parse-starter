@@ -1,0 +1,10 @@
+<form name="form" novalidate ng-submit="sendLogin(loginForm)" spinner class="form-signin css-form">
+	<h2 class="form-signin-heading">Please sign in</h2>
+	<div class="alert alert-error" ng-show="showError">
+	  Incrcorrect credentials!
+	</div>
+	<input type="text" class="input-block-level" placeholder="Username" ng-model="loginForm.username" required>
+	<input type="password" class="input-block-level" placeholder="Password" ng-model="loginForm.password" required>
+	<br/>
+	<button class="btn btn-large btn-primary" type="submit" ng-disabled="form.$invalid">Send</button>
+</form>
